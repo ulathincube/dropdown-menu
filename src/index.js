@@ -4,7 +4,7 @@ import createButton from './createButton.js';
 
 const root = document.getElementById('root');
 
-addEventListener('load', () => {
+function createDropdown() {
     const button = createButton('Show Menu');
     root.appendChild(button);
 
@@ -22,4 +22,10 @@ addEventListener('load', () => {
     }
 
     button.addEventListener('click', handleMenuButtonClick);
+}
+
+addEventListener('load', () => {
+    createDropdown();
 });
+
+export { createDropdown };
